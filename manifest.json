@@ -7,7 +7,7 @@
    "browser_action": {
       "default_icon": "icon32.png",
       "default_popup": "popup.html",
-      "default_title": "Elder Scrolls Redirector"
+      "default_title": "UESP Wiki Redirector"
    },
    "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
    "icons": {
