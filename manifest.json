@@ -1,7 +1,7 @@
 {
    "name": "UESP Wiki Redirector",
    "author": "SSyl, modified from proEndreeper's RSWikiRedirector",
-   "version": "1.1.0",
+   "version": "1.1",
    "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
    "permissions": ["storage",
                    "*://elderscrolls.wikia.com/*",
@@ -9,7 +9,7 @@
                    "webNavigation",
                    "tabs"],
  
-   "applications": {
+"browser_specific_settings": {
      "gecko" : {
        "id": "{71fe46b4-b285-44f8-82bb-b2547b0df508}"
      }
