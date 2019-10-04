@@ -1,22 +1,35 @@
 {
-   "author": "proEndreeper, Modified by SSyl to work for UESP",
-   "background": {
-      "persistent": true,
-      "scripts": [ "background.js" ]
-   },
-   "browser_action": {
-      "default_icon": "icon32.png",
-      "default_popup": "popup.html",
-      "default_title": "UESP Wiki Redirector"
-   },
-   "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
-   "icons": {
-      "128": "icon128.png",
-      "48": "icon48.png"
-   },
-   "manifest_version": 2,
    "name": "UESP Wiki Redirector",
-   "permissions": [ "storage", "*://elderscrolls.wikia.com/*","*://elderscrolls.fandom.com/*", "webNavigation", "tabs" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0"
+   "author": "SSyl, modified from proEndreeper's RSWikiRedirector",
+   "version": "1.1.0",
+   "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
+   "permissions": ["storage",
+                   "*://elderscrolls.wikia.com/*",
+                   "*://elderscrolls.fandom.com/*",
+                   "webNavigation",
+                   "tabs"],
+ 
+   "applications": {
+     "gecko" : {
+       "id": "71fe46b4-b285-44f8-82bb-b2547b0df508"
+     }
+   },
+
+   "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+
+    "browser_action": {
+      "default_icon": "icon32.png",
+      "default_title": "UESP Wiki Redirector",
+      "default_popup": "popup.html"
+    },
+ 
+    "icons":{
+  	 "48": "icon48.png",
+  	"128": "icon128.png"
+  },
+
+  "manifest_version": 2
 }
