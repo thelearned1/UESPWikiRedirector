@@ -5,7 +5,7 @@
   storage.local.get(['hideWikia'], (result) => {
     if (result && result.hideWikia) {
       // If hiding wikia results is enabled, grab all the links going to the old fandom and wikia sites
-      const wikiaLinks = document.querySelectorAll('[href*="runescape.fandom"], [href*="runescape.wikia"]');
+      const wikiaLinks = document.querySelectorAll('[href*="elderscrolls.fandom"], [href*="elderscrolls.wikia"]');
 
       // recursively go up through tree until getting relevant div to remove
       function getParent(element, maxDepth = 10) {
@@ -14,7 +14,7 @@
             // Add an element in place of the removed search result signifying a result was removed.
             var removedElement = document.createElement("span");
             removedElement.classList.add("st");
-            removedElement.innerHTML="RS Wikia search result removed by RS Wiki Redirector."
+            removedElement.innerHTML="Elder Scrolls Wikia search result removed by UESP Wiki Redirector."
             removedElement.style.paddingBottom="1em";
             removedElement.style.display="inline-block";
             element.parentElement.appendChild(removedElement);
