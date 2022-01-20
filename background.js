@@ -2,7 +2,7 @@
 (function(){
   'use strict';
   let isPluginDisabled = false; // Variable storing whether or not the plugin is disabled.
-  let storage = (typeof chrome === "undefined") ? browser.storage : chrome.storage; // Check to see if using Chrome or Firefox
+  let storage = (typeof chrome.storage === "undefined") ? browser.storage : chrome.storage; // Check to see if using Chrome or Firefox
 
   const WIKIA_REGEX = /^(elderscrolls|skyrim)\.(wikia|fandom)\.com$/i; // Used to match the domain of the old wikia/fandom to make sure we are redirecting the correct domain.
   // Used to match what game is in the title. This will be used to redirect to the appropriate page. For example, on Wikia it might be Diseases (Skyrim) while on UESP it has to be formated to Skyrim:Diseases
@@ -40,7 +40,15 @@
 
   function updateIcon(){
     // Change the icon to match the state of the plugin.
-    chrome.action.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  });
+    if(typeof chrome.action === "undefined")
+    {
+      chrome.browserAction.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what manifest v2 (Firefox) uses
+    }
+    else
+    {
+      chrome.action.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what Chrome with manifest v3 uses
+    }
+
   }
 
   storage.local.get(['isDisabled'],(result)=>{

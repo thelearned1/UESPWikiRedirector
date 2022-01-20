@@ -1,6 +1,6 @@
 (function () {
 	'use strict';
-	let storage = (typeof chrome === "undefined") ? browser.storage : chrome.storage;
+	let storage = (typeof chrome.storage === "undefined") ? browser.storage : chrome.storage;
 	let stateImage = document.getElementById("addonStateImage");
 
 	if (stateImage === null) {
@@ -26,7 +26,7 @@
 			}
 			window.currentState = result.isDisabled === true;
 			stateImage.className = result.isDisabled ? "disabled" : "enabled";
-			stateDesc.innerHTML = result.isDisabled ? "disabled" : "enabled";
+			stateDesc.textContent = result.isDisabled ? "disabled" : "enabled";
 			stateDesc.className = result.isDisabled ? "disabled" : "enabled";
 		});
 	}
