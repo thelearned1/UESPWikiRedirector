@@ -4,7 +4,7 @@
   let isPluginDisabled = false; // Variable storing whether or not the plugin is disabled.
   let storage = window.storage || chrome.storage; // Make sure we have a storage API.
 
-  const WIKIA_REGEX = /^(elderscrolls)\.(wikia|fandom)\.com$/i; // Used to match the domain of the old wikia/fandom to make sure we are redirecting the correct domain.
+  const WIKIA_REGEX = /^(elderscrolls|skyrim)\.(wikia|fandom)\.com$/i; // Used to match the domain of the old wikia/fandom to make sure we are redirecting the correct domain.
   // Used to match what game is in the title. This will be used to redirect to the appropriate page. For example, on Wikia it might be Diseases (Skyrim) while on UESP it has to be formated to Skyrim:Diseases
   const GAMES_REGEX = /\(Blades\)|\(Legends\)|\(Online\)|\(Skyrim\)|\(Dawnguard\)|\(Hearthfire\)|\(Dragonborn\)|\(Oblivion\)|\(Knights of the Nine\)|\(Morrowind\)|\(Tribunal\)|\(Bloodmoon\)|\(Daggerfall\)|\(Arena\)/
   // Listen to before anytime the browser attempts to navigate to the old Wikia/Fandom sites.
@@ -23,7 +23,7 @@
       if (!isWikia) return;
 
       var urlChange = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
-      var game = url.pathname.match(GAMES_REGEX); // Find if  skyrim
+      var game = url.pathname.match(GAMES_REGEX); // Find if skyrim
       if (game) { // Check if game exists (is not null)
         game = String(game); // Cast to a string so we can manipulate it
         urlChange = game.replace(/[()]/g,'') + ':' + urlChange.replace(game, ''); // Remove the parathensis, add : and then the game. This will format as i.e. Oblivion:Spells
@@ -31,7 +31,7 @@
       
 
       // Generate new url
-      const host = 'uesp.net/?search=';
+      const host = 'en.uesp.net/?search=';
       const redirectUrl = `https://${host}${urlChange}`; // Create the redirect URL
       console.log(`Elder Scrolls Wikia intercepted:  ${info.url}\nRedirecting to ${redirectUrl}`); 
       // Redirect the old wikia request to new wiki

@@ -5,7 +5,7 @@
   storage.local.get(['hideWikia'], (result) => {
     if (result && result.hideWikia) {
       // If hiding wikia results is enabled, grab all the links going to the old fandom and wikia sites
-      const wikiaLinks = document.querySelectorAll('[href*="elderscrolls.fandom"], [href*="elderscrolls.wikia"]');
+      const wikiaLinks = document.querySelectorAll('[href*="elderscrolls.fandom"], [href*="elderscrolls.wikia"], [href*="skyrim.fandom"], [href*="skyrim.wikia"]');
 
       // recursively go up through tree until getting relevant div to remove
       function getParent(element, maxDepth = 10) {

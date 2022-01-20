@@ -6,6 +6,8 @@
    "permissions": ["storage",
                    "*://elderscrolls.wikia.com/*",
                    "*://elderscrolls.fandom.com/*",
+                   "*://skyrim.wikia.com/*",
+                   "*://skyrim.fandom.com/*",
                    "webNavigation",
                    "tabs"],
  
