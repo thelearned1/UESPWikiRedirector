@@ -1,37 +1,31 @@
 {
-   "name": "UESP Wiki Redirector",
-   "author": "SSyl, modified from proEndreeper's RSWikiRedirector",
-   "version": "1.2",
-   "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
-   "permissions": ["storage",
-                   "*://elderscrolls.wikia.com/*",
-                   "*://elderscrolls.fandom.com/*",
-                   "*://skyrim.wikia.com/*",
-                   "*://skyrim.fandom.com/*",
-                   "webNavigation",
-                   "tabs"],
- 
-"browser_specific_settings": {
-     "gecko" : {
-       "id": "{71fe46b4-b285-44f8-82bb-b2547b0df508}"
-     }
-   },
+    "name": "UESP Wiki Redirector",
+    "author": "SSyl, modified from proEndreeper's RSWikiRedirector",
+    "version": "1.3",
+    "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
+    "permissions": ["storage",
+                    "webNavigation"],
 
-   "background": {
-      "scripts": ["background.js"],
-      "persistent": true
+    "browser_specific_settings": {
+        "gecko" : {
+            "id": "{71fe46b4-b285-44f8-82bb-b2547b0df508}"
+        }
     },
 
-    "browser_action": {
-      "default_icon": "icon32.png",
-      "default_title": "UESP Wiki Redirector",
-      "default_popup": "popup.html"
+    "background": {
+        "service_worker": "background.js"
     },
- 
+
+    "action": {
+        "default_icon": "icon32.png",
+        "default_title": "UESP Wiki Redirector",
+        "default_popup": "popup.html"
+    },
+
     "icons":{
-  	 "48": "icon48.png",
-  	"128": "icon128.png"
-  },
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
 
-  "manifest_version": 2
+    "manifest_version": 3
 }
