@@ -1,7 +1,7 @@
 {
    "name": "UESP Wiki Redirector",
    "author": "SSyl, modified from proEndreeper's RSWikiRedirector",
-   "version": "1.1",
+   "version": "1.2",
    "description": "Redirects Elder Scrolls Wikia/Fandom requests to UESP",
    "permissions": ["storage",
                    "*://elderscrolls.wikia.com/*",
