@@ -7,9 +7,12 @@
   const WIKIA_REGEX = /^(elderscrolls|skyrim)\.(wikia|fandom)\.com$/i; // Used to match the domain of the old wikia/fandom to make sure we are redirecting the correct domain.
   // Used to match what game is in the title. This will be used to redirect to the appropriate page. For example, on Wikia it might be Diseases (Skyrim) while on UESP it has to be formated to Skyrim:Diseases
   const GAMES_REGEX = /\(Blades\)|\(Legends\)|\(Online\)|\(Skyrim\)|\(Dawnguard\)|\(Hearthfire\)|\(Dragonborn\)|\(Oblivion\)|\(Knights of the Nine\)|\(Morrowind\)|\(Tribunal\)|\(Bloodmoon\)|\(Daggerfall\)|\(Arena\)/
+  // Used to account for edge case where user is navigating to the homepage for a given game
+  const HOMEPAGE_REGEX = /^Portal:(.+)$/;
   // Listen to before anytime the browser attempts to navigate to the old Wikia/Fandom sites.
   chrome.webNavigation.onBeforeNavigate.addListener(
     function(info) {
+
       if(isPluginDisabled) { // Ignore all navigation requests when the extension is disabled.
         console.log("Elder Scrolls Wikia intercepted, ignoring because plugin is disabled.");
         return;
@@ -27,6 +30,11 @@
       if (game) { // Check if game exists (is not null)
         game = String(game); // Cast to a string so we can manipulate it
         urlChange = game.replace(/[()]/g,'') + ':' + urlChange.replace(game, ''); // Remove the parathensis, add : and then the game. This will format as i.e. Oblivion:Spells
+      } else {
+        const homepageMatch = urlChange.match(HOMEPAGE_REGEX);
+        if (homepageMatch) {
+          urlChange = `${homepageMatch[1]}:${homepageMatch[1]}`;
+        }
       }
       
 
