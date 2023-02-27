@@ -7,7 +7,7 @@
   const WIKIA_REGEX = /^(elderscrolls|skyrim)\.(wikia|fandom)\.com$/i; // Used to match the domain of the old wikia/fandom to make sure we are redirecting the correct domain.
   // Used to match what game is in the title. This will be used to redirect to the appropriate page. For example, on Wikia it might be Diseases (Skyrim) while on UESP it has to be formated to Skyrim:Diseases
   const GAMES_REGEX = /\(Blades\)|\(Legends\)|\(Online\)|\(Skyrim\)|\(Dawnguard\)|\(Hearthfire\)|\(Dragonborn\)|\(Oblivion\)|\(Knights of the Nine\)|\(Morrowind\)|\(Tribunal\)|\(Bloodmoon\)|\(Daggerfall\)|\(Arena\)/
-  // Used to account for edge case where user is navigating to the homepage for a given game
+  // Used to account for edge case where user is navigating to the Wikia/Fandom homepage for a given game
   const HOMEPAGE_REGEX = /^Portal:(.+)$/;
   // Listen to before anytime the browser attempts to navigate to the old Wikia/Fandom sites.
   chrome.webNavigation.onBeforeNavigate.addListener(
@@ -21,15 +21,15 @@
       // Create a native URL object to more easily determine the path of the url and the domain.
       const url = new URL(info.url);
 
-      const isWikia = WIKIA_REGEX.test(url.host); // Check to ensure the redirect is occurring on either the fandom/wikia domain.
-      // If domain isn't subdomain of wikia.com, ignore, also if it's not in the redirect filter
+      const isWikia = WIKIA_REGEX.test(url.host); // Check whether the request is occuring on either the fandom/wikia domain.
+      // If domain isn't a subdomain of wikia.com, ignore, also if it's not in the redirect filter
       if (!isWikia) return;
 
       var urlChange = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
-      var game = url.pathname.match(GAMES_REGEX); // Find if skyrim
+      var game = url.pathname.match(GAMES_REGEX); // Find if Skyrim
       if (game) { // Check if game exists (is not null)
         game = String(game); // Cast to a string so we can manipulate it
-        urlChange = game.replace(/[()]/g,'') + ':' + urlChange.replace(game, ''); // Remove the parathensis, add : and then the game. This will format as i.e. Oblivion:Spells
+        urlChange = game.replace(/[()]/g,'') + ':' + urlChange.replace(game, ''); // Remove the parathensis, add : and then the game. This will format as e.g. Oblivion:Spells
       } else {
         const homepageMatch = urlChange.match(HOMEPAGE_REGEX);
         if (homepageMatch) {
@@ -42,7 +42,7 @@
       const host = 'en.uesp.net/?search=';
       const redirectUrl = `https://${host}${urlChange}`; // Create the redirect URL
       console.log(`Elder Scrolls Wikia intercepted:  ${info.url}\nRedirecting to ${redirectUrl}`); 
-      // Redirect the old wikia request to new wiki
+      // Redirect the old wikia request to the UESP wiki
       chrome.tabs.update(info.tabId,{url:redirectUrl});
     });
 
@@ -50,11 +50,11 @@
     // Change the icon to match the state of the plugin.
     if(typeof chrome.action === "undefined")
     {
-      chrome.browserAction.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what manifest v2 (Firefox) uses
+      chrome.browserAction.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what manifest v2 (Firefox, Safari) uses
     }
     else
     {
-      chrome.action.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what Chrome with manifest v3 uses
+      chrome.action.setIcon({ path: isPluginDisabled?"icon32_black.png":"icon32.png"  }); // This is what manifest v3 (Chrome, Edge, Opera) uses
     }
 
   }
