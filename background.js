@@ -1,3 +1,6 @@
+import getUespPage from "./getUespPage";
+
+
 const SKYRIM_REGEX = /^skyrim\./i // used to determine whether on the Skyrim wiki
 
 /*
@@ -12,41 +15,40 @@ const NAMESPACE_REGEX = /(.+?)\((Blades|Legends|Online|Skyrim|Dawnguard|Hearthfi
 const HOMEPAGE_REGEX = /^Portal:(.+)$/;
 
 
-function getUespPage (url) {
-  let wikiaPageName = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
+// function getUespPage (url) {
+//   let wikiaPageName = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
 
-  // # Determine title of the UESP page
-  let namespace = '', uespPageName = '';
+//   // # Determine title of the UESP page
+//   let namespace = '', uespPageName = '';
 
-  // ## Determine `namespace`
-  let titleInfo = wikiaPageName.match(NAMESPACE_REGEX);
+//   // ## Determine `namespace`
+//   let titleInfo = wikiaPageName.match(NAMESPACE_REGEX);
 
-  if (titleInfo) { 
-    namespace = titleInfo[2]+':';
-  } else if (url.host.match(SKYRIM_REGEX)) { // skyrim wiki should be in 'Skyrim:' namespace
-    namespace = 'Skyrim:'
-  } else { // if ES wiki and titled "Portal:[X]", UESP page is probably titled "[X]:[X]"
-    const homepageMatch = wikiaPageName.match(HOMEPAGE_REGEX);
-    if (homepageMatch) {
-      namespace = homepageMatch[1]+':';
-      uespPageName = homepageMatch[1];
-    }
-  }
+//   if (titleInfo) { 
+//     namespace = titleInfo[2]+':';
+//   } else if (url.host.match(SKYRIM_REGEX)) { // skyrim wiki should be in 'Skyrim:' namespace
+//     namespace = 'Skyrim:'
+//   } else { // if ES wiki and titled "Portal:[X]", UESP page is probably titled "[X]:[X]"
+//     const homepageMatch = wikiaPageName.match(HOMEPAGE_REGEX);
+//     if (homepageMatch) {
+//       namespace = homepageMatch[1]+':';
+//       uespPageName = homepageMatch[1];
+//     }
+//   }
   
-  // ## Determine `uespPageName` if not already found
-  if (!uespPageName) {
-    if (titleInfo) {
-      uespPageName = 
-        titleInfo[1].replace(/(^\+*)|(\+*$)/g, '') +
-        titleInfo[3].replace(/(\+*$)/g, '');
-    } else {
-      uespPageName = wikiaPageName;
-    }
-  }
+//   // ## Determine `uespPageName` if not already found
+//   if (!uespPageName) {
+//     if (titleInfo) {
+//       uespPageName = 
+//         titleInfo[1].replace(/(^\+*)|(\+*$)/g, '') +
+//         titleInfo[3].replace(/(\+*$)/g, '');
+//     } else {
+//       uespPageName = wikiaPageName;
+//     }
+//   }
 
-  return [namespace, uespPageName];
-}
-
+//   return [namespace, uespPageName];
+// }
 
 // Simple extension to redirect all requests to Elder Scrolls Wikia/Fandom to the Unofficial Elder Scrolls Pages
 (function(){
