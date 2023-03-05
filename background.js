@@ -1,6 +1,4 @@
-import getUespPage from "./getUespPage";
-
-
+//SED:TEST START
 const SKYRIM_REGEX = /^skyrim\./i // used to determine whether on the Skyrim wiki
 
 /*
@@ -12,43 +10,43 @@ const SKYRIM_REGEX = /^skyrim\./i // used to determine whether on the Skyrim wik
  */
 const NAMESPACE_REGEX = /(.+?)\((Blades|Legends|Online|Skyrim|Dawnguard|Hearthfire|Dragonborn|Oblivion|Knights of the Nine|Morrowind|Tribunal|Bloodmoon|Daggerfall|Arena)\)(.*?)$/
 // Used to account for edge case where user is navigating to the Wikia/Fandom homepage for a given game
-const HOMEPAGE_REGEX = /^Portal:(.+)$/;
+const HOMEPAGE_REGEX = /^Portal:(The\+Elder\+Scrolls\+[IV]+:\+)?/;
 
+function getUespPage (url) {
+  let wikiaPageName = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
 
-// function getUespPage (url) {
-//   let wikiaPageName = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
+  // # Determine title of the UESP page
+  let namespace = '', uespPageName = '';
 
-//   // # Determine title of the UESP page
-//   let namespace = '', uespPageName = '';
+  // ## Determine `namespace`
+  let titleInfo = wikiaPageName.match(NAMESPACE_REGEX);
 
-//   // ## Determine `namespace`
-//   let titleInfo = wikiaPageName.match(NAMESPACE_REGEX);
-
-//   if (titleInfo) { 
-//     namespace = titleInfo[2]+':';
-//   } else if (url.host.match(SKYRIM_REGEX)) { // skyrim wiki should be in 'Skyrim:' namespace
-//     namespace = 'Skyrim:'
-//   } else { // if ES wiki and titled "Portal:[X]", UESP page is probably titled "[X]:[X]"
-//     const homepageMatch = wikiaPageName.match(HOMEPAGE_REGEX);
-//     if (homepageMatch) {
-//       namespace = homepageMatch[1]+':';
-//       uespPageName = homepageMatch[1];
-//     }
-//   }
+  if (titleInfo) { 
+    namespace = titleInfo[2];
+  } else if (url.host.match(SKYRIM_REGEX)) { // skyrim wiki should be in 'Skyrim:' namespace
+    namespace = 'Skyrim'
+  } else { // if ES wiki and titled "Portal:[X]", UESP page is probably titled "[X]:[X]"
+    const homepageMatch = wikiaPageName.match(HOMEPAGE_REGEX);
+    if (homepageMatch) {
+      namespace = wikiaPageName.replace(HOMEPAGE_REGEX, '');
+      uespPageName = namespace;
+    }
+  }
   
-//   // ## Determine `uespPageName` if not already found
-//   if (!uespPageName) {
-//     if (titleInfo) {
-//       uespPageName = 
-//         titleInfo[1].replace(/(^\+*)|(\+*$)/g, '') +
-//         titleInfo[3].replace(/(\+*$)/g, '');
-//     } else {
-//       uespPageName = wikiaPageName;
-//     }
-//   }
+  // ## Determine `uespPageName` if not already found
+  if (!uespPageName) {
+    if (titleInfo) {
+      uespPageName = 
+        titleInfo[1].replace(/(^\+*)|(\+*$)/g, '') +
+        titleInfo[3].replace(/(\+*$)/g, '');
+    } else {
+      uespPageName = wikiaPageName;
+    }
+  }
 
-//   return [namespace, uespPageName];
-// }
+  return [namespace+(namespace ? ':' : ''), uespPageName];
+}
+//SED:TEST END
 
 // Simple extension to redirect all requests to Elder Scrolls Wikia/Fandom to the Unofficial Elder Scrolls Pages
 (function(){
@@ -116,4 +114,13 @@ const HOMEPAGE_REGEX = /^Portal:(.+)$/;
     );
 })();
 
-module.exports = getUespPage;
+
+// try {
+//   module.exports = getUespPage;
+// } catch (e) {
+//   console.warn(
+//     `Tried to export function getUespPage, but got an error. `+
+//     `Don't worry --- this is just to support testing and is `+
+//     `expected behavior.`
+//   );
+// }
