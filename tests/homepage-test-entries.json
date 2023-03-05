@@ -1,0 +1,77 @@
+[
+  {
+    "id": 163463,
+    "fandomTitle": "Portal:Arena",
+    "uespTitle": "Arena:Arena"
+  },
+  {
+    "id": 1092736,
+    "fandomTitle": "Portal:Battlespire",
+    "uespTitle": "Battlespire:Battlespire"
+  },
+  {
+    "id": 1092753,
+    "fandomTitle": "Portal:Blades",
+    "uespTitle": "Blades:Blades"
+  },
+  {
+    "id": 163461,
+    "fandomTitle": "Portal:Daggerfall",
+    "uespTitle": "Daggerfall:Daggerfall"
+  },
+  {
+    "id": 1092741,
+    "fandomTitle": "Portal:Legends",
+    "uespTitle": "Legends:Legends"
+  },
+  {
+    "id": 163458,
+    "fandomTitle": "Portal:Morrowind",
+    "uespTitle": "Morrowind:Morrowind"
+  },
+  {
+    "id": 163456,
+    "fandomTitle": "Portal:Oblivion",
+    "uespTitle": "Oblivion:Oblivion"
+  },
+  {
+    "id": 163469,
+    "fandomTitle": "Portal:Online",
+    "uespTitle": "Online:Online"
+  },
+  {
+    "id": 1092732,
+    "fandomTitle": "Portal:Redguard",
+    "uespTitle": "Redguard:Redguard"
+  },
+  {
+    "id": 39867,
+    "fandomTitle": "Portal:Sandbox",
+    "uespTitle": null
+  },
+  {
+    "id": 163455,
+    "fandomTitle": "Portal:Skyrim",
+    "uespTitle": "Skyrim:Skyrim"
+  },
+  {
+    "id": 40592,
+    "fandomTitle": "Portal:The Elder Scrolls II: Daggerfall",
+    "uespTitle": "Daggerfall:Daggerfall"
+  },
+  {
+    "id": 40593,
+    "fandomTitle": "Portal:The Elder Scrolls III: Morrowind",
+    "uespTitle": "Morrowind:Morrowind"
+  },
+  {
+    "id": 40594,
+    "fandomTitle": "Portal:The Elder Scrolls IV: Oblivion",
+    "uespTitle": "Oblivion:Oblivion"
+  },
+  {
+    "id": 40595,
+    "fandomTitle": "Portal:The Elder Scrolls V: Skyrim",
+    "uespTitle": "Skyrim:Skyrim"
+  }
+]
