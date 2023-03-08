@@ -3,7 +3,7 @@
     "jest": "^29.4.3"
   },
   "scripts": {
-    "test": "jest --noStackTrace --no-color 2>testResults.txt",
+    "test": "jest --verbose --noStackTrace --no-color 2>testResults.txt",
     "build": "esbuild background-module.js --bundle --outfile=background.js",
     "run-ff": "npm run build && web-ext run --no-reload",
     "run-chrome": "npm run build && web-ext run -t chromium --no-reload"
