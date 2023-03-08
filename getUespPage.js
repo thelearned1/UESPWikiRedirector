@@ -10,27 +10,29 @@ const SKYRIM_REGEX = /^skyrim\./i // used to determine whether on the Skyrim wik
 const NAMESPACE_REGEX = /(.+?)\((Blades|Legends|Online|Skyrim|Dawnguard|Hearthfire|Dragonborn|Oblivion|Knights of the Nine|Morrowind|Tribunal|Bloodmoon|Daggerfall|Arena)\)(.*?)$/
 // Used to account for edge case where user is navigating to the Wikia/Fandom homepage for a given game
 const HOMEPAGE_REGEX = /^Portal:(The\+Elder\+Scrolls\+[IV]+:\+)?/;
-const MAIN_PAGE_REGEX = /^(https?)?:\/\/(elderscrolls|skyrim)\.(wikia|fandom)\.com(\/wiki\/(Skyrim_Wiki|The_Elder_Scrolls_Wiki|Main_Page))?/i;
 
 function getUespPage (url) {
 
-  // account for when the user navigates to elderscrolls.fandom.com directly
-  const mainPage = url.href.match(MAIN_PAGE_REGEX);
-  if (mainPage) {
-    if (
-        mainPage[2].toLowerCase() === "elderscrolls" && 
-        mainPage[5]?.toLowerCase() !== "skyrim_wiki"
-      ) 
-    {
-      return "Main+Page"
-    } else {
-      return "Skyrim:Skyrim"
-    }
-  }
-
-
   let wikiaPageName = url.pathname.replace('/wiki/', '').replace(/_/g, '+');  // Change URL from underscores to plus symbols so that it can search the wiki. Also removes /wiki/ from the URL.
-
+  // account for when the user navigates to directly to a homepage (e.g. elderscrolls.fandom.com)
+  switch (wikiaPageName.toLowerCase()) {
+    case 'main+page':
+    case '/':
+      if (url.host.match(SKYRIM_REGEX)) {
+        return 'Skyrim:Skyrim'
+      } else {
+        return 'Main+Page'
+      }
+      break;
+    case 'skyrim+wiki':
+      return 'Skyrim:Skyrim';
+      break;
+    case 'the+elder+scrolls+wiki':
+      return 'Main+Page';
+      break;
+    default:
+      break;
+  }
 
   // # Determine title of the UESP page
   let namespace = '', uespPageName = '';
