@@ -31,6 +31,7 @@ function getUespPage (url) {
       uespPageName = namespace;
     }
   }
+  namespace = (namespace ? namespace + ':' : '');
   
   // ## Determine `uespPageName` if not already found
   if (!uespPageName) {
@@ -43,7 +44,7 @@ function getUespPage (url) {
     }
   }
 
-  return [namespace+(namespace ? ':' : ''), uespPageName];
+  return namespace+uespPageName;
 }
 
 module.exports = getUespPage; 

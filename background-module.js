@@ -24,11 +24,11 @@ const getUespPage = require ('./getUespPage.js');
       if (!isWikia) return;      
 
 
-      const [namespace, uespPageName] = getUespPage(url);
+      const urlChange = getUespPage(url);
 
       // Generate new url
       const host = 'en.uesp.net/?search=';
-      const redirectUrl = `https://${host}${namespace}${uespPageName}`; // Create the redirect URL
+      const redirectUrl = `https://${host}${urlChange}`; // Create the redirect URL
       console.log(`Elder Scrolls Wikia intercepted:  ${info.url}\nRedirecting to ${redirectUrl}`); 
       // Redirect the old wikia request to the UESP wiki
       chrome.tabs.update(info.tabId,{url:redirectUrl});

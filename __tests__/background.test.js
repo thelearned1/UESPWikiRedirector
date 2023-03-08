@@ -11,8 +11,8 @@ describe('elderscrolls fandom page', () => {
 	test.each(elderscrollsPages)(
 		' $fandomTitle is redirected to $uespTitle', 
 		({id, fandomTitle, uespTitle}) => {
-			const [namespace, pageName] = getUespPage(new URL(`${elderscrollsWiki}${fandomTitle.replace(/ /g, '_')}`));
-			const output = `${namespace}${pageName}`.replace(/\+/g, ' ')
+			const urlChange = getUespPage(new URL(`${elderscrollsWiki}${fandomTitle.replace(/ /g, '_')}`));
+			const output = urlChange.replace(/\+/g, ' ').trim();
 			expect(output).toBe(uespTitle);
 		}
 	)
@@ -22,8 +22,8 @@ describe('skyrim fandom page', () => {
 	test.each(skyrimPages)(
 		' $fandomTitle is redirected to $uespTitle', 
 		({id, fandomTitle, uespTitle}) => {
-			const [namespace, pageName] = getUespPage(new URL(`${skyrimWiki}${fandomTitle.replace(/ /g, '_')}`));
-			const output = `${namespace}${pageName}`.replace(/\+/g, ' ')
+			const urlChange = getUespPage(new URL(`${skyrimWiki}${fandomTitle.replace(/ /g, '_')}`));
+			const output = urlChange.replace(/\+/g, ' ').trim();
 			expect(output).toBe(uespTitle);
 		}
 	)
@@ -33,8 +33,8 @@ describe('elderscrolls portal page', () => {
 	test.each(portalPages)(
 		' $fandomTitle is redirected to $uespTitle', 
 		({id, fandomTitle, uespTitle}) => {
-			const [namespace, pageName] = getUespPage(new URL(`${elderscrollsWiki}${fandomTitle.replace(/ /g, '_')}`));
-			const output = `${namespace}${pageName}`.replace(/\+/g, ' ');
+			const urlChange = getUespPage(new URL(`${elderscrollsWiki}${fandomTitle.replace(/ /g, '_')}`));
+			const output = urlChange.replace(/\+/g, ' ');
 			expect(output).toBe(uespTitle);
 		}
 	)
