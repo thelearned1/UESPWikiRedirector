@@ -1,6 +1,13 @@
 {
-  "devDependencies": {
-    "esbuild": "^0.17.11",
+  "dependencies": {
     "jest": "^29.4.3"
+  },
+  "scripts": {
+    "test": "jest --noStackTrace --no-color 2>testResults.txt",
+    "build": "esbuild background-module.js --bundle --outfile=background.js",
+    "run-ff": "npm run build && web-ext run"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.11"
   }
 }
