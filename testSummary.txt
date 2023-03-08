@@ -1,0 +1,290 @@
+Test Suites: 3 failed, 3 total
+Tests:       247 failed, 27 passed, 274 total
+Snapshots:   0 total
+Time:        0.89 s
+Ran all test suites.
+
+FAIL __tests__/randomPage.test.js
+  random elderscrolls.fandom.com pages
+    ✓  Hammerfell (Arena) is redirected to Arena:Hammerfell (1 ms)
+    ✕  Stacking the Odds is redirected to Online:Stacking the Odds (4 ms)
+    ✕  Welcome to Cyrodiil (Pact) is redirected to Online:Welcome to Cyrodiil (Pact) (1 ms)
+    ✕  Guild Master's Gloves is redirected to Skyrim:Guild Master's Gloves
+    ✕  Deerbridge Hollow is redirected to null (1 ms)
+    ✕  Bezera is redirected to Online:Bezera (1 ms)
+    ✕  Old Ysolda's Hovel is redirected to null
+    ✓  Marbruk Field (Arena) is redirected to Arena:Marbruk Field
+    ✕  Yashurah is redirected to Online:Yashurah (1 ms)
+    ✕  Fangil is redirected to Online:Fangil
+    ✕  Chesterwood is redirected to null
+    ✓  The Vagaries of Magicka is redirected to The Vagaries of Magicka
+    ✕  Steel Claymore (Arena) is redirected to Arena:Claymores (1 ms)
+    ✕  Meksim the Walker is redirected to Lore:Songs_of_the_Return,_Vol_7 (1 ms)
+    ✕  Characters (Dragonborn) is redirected to Skyrim:People
+    ✕  Mammoth Snout is redirected to Skyrim:Mammoth Snout
+    ✕  The Green Ladies' Abode is redirected to Online:The Green Ladies' Abode
+    ✕  Tall Trunk Tavern is redirected to Online:Tall Trunk Tavern (1 ms)
+    ✕  Cronvangr Cave is redirected to Skyrim:Cronvangr Cave
+    ✕  White Rose is redirected to Daggerfall:White rose
+    ✕  Moon Sugar Biscuits is redirected to Online:Provisioning_Ingredients/deprecated (1 ms)
+    ✕  Canonreeve Malanie is redirected to Online:Canonreeve_Malanie (1 ms)
+    ✕  Athanden Girith is redirected to Morrowind:Athanden Girith (1 ms)
+    ✓  Book of Life and Service is redirected to Book of Life and Service
+    ✓  Plea for Open Eyes is redirected to Plea for Open Eyes
+    ✕  Amber Warhammer is redirected to Skyrim:Amber (1 ms)
+    ✕  Kill Banden Indarys (Hlaalu) is redirected to Morrowind:Kill Banden Indarys (Hlaalu) (1 ms)
+    ✕  Alik'r Treasure Map V is redirected to Online:Alik'r Treasure Map V
+    ✕  Endehm is redirected to Online:Endehm
+    ✕  Lost in the Gloam is redirected to Online:Lost in the Gloam
+    ✕  Walks-with-Bargains is redirected to Online:Walks-with-Bargains
+    ✕  Molly Farielle is redirected to Online:Molly Farielle (1 ms)
+    ✓  The Glenmoril Wyrd is redirected to The Glenmoril Wyrd
+    ✕  Wisp Wrappings is redirected to Skyrim:Wisp Wrappings
+    ✕  Zharahn is redirected to Online:Zharahn
+    ✕  Aburzin is redirected to Online:Aburzin (1 ms)
+    ✕  Mantled College Robes is redirected to Skyrim:Mantled College Robes
+    ✕  Separated at Birth is redirected to Oblivion:Separated at Birth (1 ms)
+    ✓  Haynote Cave (Online) is redirected to Online:Haynote Cave
+    ✕  Surpassing Safekeeping is redirected to Morrowind:Surpassing Safekeeping
+    ✕  Angeniel the Farflung is redirected to Online:Angeniel the Farflung
+    ✕  Copperhouse Manor is redirected to null
+    ✓  Adamantium Left Pauldron (Morrowind) is redirected to Morrowind:Adamantium Left Pauldron
+    ✕  Spinner Indinael is redirected to Online:Spinner Indinael
+    ✕  Nordic Fur Helm is redirected to Morrowind:Nordic Fur Helm
+    ✓  The City of Stone is redirected to The City of Stone
+    ✕  Potion of Detect Key is redirected to Morrowind:Potion of Detect Key (1 ms)
+    ✕  The Lhojin Cemetery is redirected to Daggerfall:Alik'r/Dungeons
+    ✕  Nulaga is redirected to Online:Nulaga
+    ✕  Goblin (Redguard) is redirected to Redguard:Goblin
+    ✕  The Ristaag is redirected to Bloodmoon:The Ristaag
+    ✕  Artaeum is redirected to Lore:Artaeum
+    ✓  Wraith (Online) is redirected to Online:Wraith
+    ✕  Murudius Flaeus's House is redirected to Morrowind:Murudius Flaeus's House
+    ✕  Eris Senim is redirected to Oblivion:Eris Senim
+    ✕  Gan Luseph is redirected to Oblivion:Gan Luseph
+    ✕  Gasheg is redirected to Online:Gasheg
+    ✓  Hackdirt (Online) is redirected to Online:Hackdirt
+    ✓  Iron Boots (Oblivion) is redirected to Oblivion:Iron Boots
+    ✕  Fort Virtue is redirected to Oblivion:Fort Virtue
+    ✕  Staff of the Everscamp is redirected to Oblivion:Staff of the Everscamp (1 ms)
+    ✕  The Mines of Rodynak is redirected to Daggerfall:Anticlere/Dungeons
+    ✕  Agra Crun (Book) is redirected to Online:Agra Crun (Book)
+    ✕  Manone Troivois is redirected to Online:Manone Troivois
+    ✕  Ruins of Old Lysyna's Farm (Daggerfall) is redirected to Daggerfall:Northmoor/Dungeons
+    ✕  Lenka Valus is redirected to Oblivion:Lenka Valus
+    ✕  Meerana is redirected to Online:Meerana
+    ✕  Duneripper's Scales is redirected to Online:Duneripper's Scales
+    ✕  From Argonian to Saxhleel is redirected to Lore:From Argonian to Saxhleel (3 ms)
+    ✕  Aymillo Alor is redirected to Online:Aymillo Alor
+    ✕  Electrifying Spark is redirected to Oblivion:Spell Tomes (1 ms)
+    ✕  Contract: Eastmarch Spree is redirected to Online:Dark Brotherhood Contracts (1 ms)
+    ✓  Nibenay Valley (Oblivion) is redirected to Oblivion:Nibenay Valley
+    ✓  Guide To Better Thieving is redirected to Guide To Better Thieving
+    ✕  Droops (Dragonborn) is redirected to Skyrim:Disease (1 ms)
+    ✕  Mzanch is redirected to null
+    ✕  Quests (Oblivion Mobile) is redirected to OBMobile:Quests
+    ✕  Researcher Svarjarda is redirected to Online:Researcher Svarjarda
+    ✕  Hulda is redirected to Skyrim:Hulda
+    ✕  Critical Mass is redirected to Online:Critical Mass
+    ✕  Bleak Mine Guard is redirected to Oblivion:Bleak Mine Guard
+    ✕  Kingford Manor (Anticlere) is redirected to Daggerfall:Anticlere/Dungeons
+    ✕  Morkuldin's Final Delivery is redirected to Online:Morkuldin's Final Delivery (1 ms)
+    ✕  Coppercroft Hall is redirected to null
+    ✕  Cheap Restore Health is redirected to Morrowind:Cheap Restore Health
+    ✕  Rescue from Fort Neugrad is redirected to Skyrim:Rescue from Fort Neugrad
+    ✕  Staff of Fury is redirected to Skyrim:Staff of Fury
+    ✕  Soljund's Sinkhole (Quest) is redirected to Skyrim:Soljund's Sinkhole (Quest)
+    ✕  Olvyia Indaram is redirected to Online:Olvyia Indaram
+    ✕  Sharpfang is redirected to Online:Sharpfang (1 ms)
+    ✕  Aldos Othran's House is redirected to Oblivion:Aldos Othran's House
+    ✕  Wanted: Sgolag (Book) is redirected to Online:Wanted: Sgolag (note)
+    ✕  Kynareth's Grotto is redirected to Oblivion:Kynareth's Grotto
+    ✕  Bravil, Part 1 is redirected to Online:Bravil, Part 1
+    ✕  Red Petal Bastion/Achievements is redirected to Online:Red Petal Bastion Slayer Achievements (1 ms)
+    ✕  Werewolf Berserker (Skill) is redirected to Online:Werewolf Transformation
+    ✕  Crocodile Hide Gloves is redirected to null
+    ✕  Hlavora Rothan is redirected to Online:Hlavora Rothan
+    ✓  Miscellaneous Items (Skyrim) is redirected to Skyrim:Miscellaneous Items
+    ✕  Elvil Vidron is redirected to Morrowind:Elvil Vidron
+    ✕  Edeleg is redirected to Online:Edeleg (1 ms)
+    ✕  Castle T'eze is redirected to Daggerfall:Dragontail Mountains/Dungeons
+    ✕  The Tombs of Hearthing (Dwynnen) is redirected to Daggerfall:Dwynnen/Dungeons
+    ✕  Ramshackle Trading Post is redirected to Skyrim:Ramshackle Trading Post (1 ms)
+    ✕  Daril is redirected to Lore:Daril
+    ✕  Myrwatch (Skyrim Creation Club Location) is redirected to Skyrim:Myrwatch (place) (1 ms)
+    ✕  Otho Rufinus is redirected to Online:Otho Rufinus (1 ms)
+    ✕  Captain Zugnor is redirected to Online:Captain Zugnor
+    ✕  Hleetheiez is redirected to Online:Hleetheiez
+    ✕  Ufgalash is redirected to Online:Ufgalash
+    ✕  Hendraheim (Skyrim Creation Club Location) is redirected to Skyrim:Hendraheim (place)
+    ✕  Seryn's Blessing is redirected to Morrowind:Seryn's Blessing
+    ✕  Jhim Sei Shrine (Dragontail Mountains) is redirected to Daggerfall:Shrines
+    ✕  Zalema is redirected to Online:Zalema
+    ✕  Message in a Bottle (Recipe) is redirected to Online:Message in a Bottle (recipe) (1 ms)
+    ✕  Qymala is redirected to Online:Qymala
+    ✕  Ambroise Canne is redirected to Oblivion:Ambroise Canne (1 ms)
+    ✕  Old Elyzabyth's Place (Bhoriane) is redirected to null
+    ✓  Troll Skull is redirected to Troll Skull
+    ✕  Great Resist Shock is redirected to Morrowind:Great Resist Shock
+    ✕  Tasaaqara is redirected to Daggerfall:Santaki (1 ms)
+    ✕  Logrun is redirected to null
+    ✓  Dragonplate Shield (Skyrim) is redirected to Skyrim:Dragonplate Shield
+    ✕  The 36 Lessons: Sermon 30 is redirected to Online:The 36 Lessons: Sermon 30
+    ✓  Dawnbreaker is redirected to Dawnbreaker (1 ms)
+    ✕  Captain Alesace is redirected to Online:Captain Alesace (3 ms)
+    ✕  Draren Thiralas is redirected to Morrowind:Draren Thiralas
+    ✕  Warlock's Ring (Morrowind) is redirected to Morrowind:Warlock's Ring (artifact)
+    ✓  Gold Coast Trading Company is redirected to Gold Coast Trading Company
+    ✓  Varieties of Faith: The Wood Elves is redirected to Varieties of Faith: The Wood Elves (1 ms)
+    ✕  The Stolen Item is redirected to Daggerfall:The Stolen Item
+    ✕  The Bat and Bird Hostel is redirected to null (1 ms)
+    ✕  Spectral Warhound is redirected to Skyrim:Spectral Warhound (1 ms)
+    ✕  Wooded Eye is redirected to Online:Wooded Eye (1 ms)
+    ✕  The Ashford Farmstead (Daggerfall) is redirected to null
+    ✕  Aeliah Renmus is redirected to Online:Aeliah Renmus
+    ✕  Per Vetersen is redirected to null
+    ✕  The Maark Vaults is redirected to Daggerfall:Ayasofya/Dungeons
+    ✕  Nightgate Inn is redirected to Skyrim:Nightgate Inn
+    ✓  Slaughterfish (Oblivion) is redirected to Oblivion:Slaughterfish
+    ✕  The Ashton Cemetery is redirected to Daggerfall:Urvaius/Dungeons (1 ms)
+    ✕  Telarnel is redirected to Online:Telarnel (1 ms)
+    ✕  Old Vannyn's Farm is redirected to null
+    ✕  Mikrul Gauldurson is redirected to Skyrim:Mikrul Gauldurson (1 ms)
+    ✓  Gold Sapphire Ring (Skyrim) is redirected to Skyrim:Gold Sapphire Ring
+    ✕  The Rodyrick Academy is redirected to Daggerfall:Glenpoint/Dungeons (1 ms)
+    ✕  Bastibien Renaudin is redirected to Online:Bastibien Renaudin (1 ms)
+    ✕  Brey is redirected to Online:Brey
+    ✕  Olpac Trailslag is redirected to Shadowkey:Olpac Trailslag (1 ms)
+    ✕  The Old Luctta Shack is redirected to null
+    ✕  Arocil is redirected to Online:Arocil (1 ms)
+    ✕  Addax is redirected to Online:Addax
+    ✕  Mathys is redirected to Online:Mathys
+    ✕  General Godrun's Orders is redirected to Online:General Godrun's Orders
+    ✓  Thirsk (Bloodmoon) is redirected to Bloodmoon:Thirsk
+    ✓  A Soldier's Letter is redirected to A Soldier's Letter (1 ms)
+    ✕  The Dead Goat Tavern is redirected to null
+    ✕  Greenhart Manor is redirected to Daggerfall:Glenpoint/Dungeons (1 ms)
+    ✕  Twin Arches is redirected to Online:Twin Arches
+    ✕  Urtiso Faryon: Sorcerer is redirected to Morrowind:Urtiso Faryon (1 ms)
+    ✕  Keerava is redirected to Skyrim:Keerava
+    ✓  The March Explored, Chapter VI is redirected to The March Explored, Chapter VI
+    ✕  Concerns, Petitions, Complaints is redirected to Online:Concerns, Petitions, Complaints
+    ✕  The Dagger's Edge is redirected to Online:The Dagger's Edge (1 ms)
+    ✕  Authority is redirected to Online:Authority
+    ✕  Ebony Brassilisk is redirected to Online:Ebony Brassilisk (1 ms)
+    ✕  Axe of Twilight Remedy is redirected to null
+    ✕  Geldis Sadri is redirected to Skyrim:Geldis Sadri (1 ms)
+    ✕  Old Carolyrrya's Hovel is redirected to null
+    ✕  The Flying Wolf Lodge is redirected to null (1 ms)
+    ✕  Nothasea Beni is redirected to Morrowind:Nothasea Beni
+    ✕  Egilas is redirected to Online:Egilas
+    ✕  Seaview Point is redirected to Online:Seaview Point
+    ✕  Sour-Tooth is redirected to Online:Sour-Tooth
+    ✕  Mithril Broadsword (Arena) is redirected to Arena:Base_Weapons (1 ms)
+    ✕  Cardea Gallus is redirected to Online:Cardea Gallus
+    ✕  Recipes (Online)/Condensed is redirected to Online:Recipes
+    ✕  Group Dungeons is redirected to Online:Group Dungeons
+    ✕  Maces (Skyrim) is redirected to Skyrim:Mace
+    ✕  Malabal Tor/Zone Quests is redirected to Online:Malabal_Tor
+    ✕  The Magister Makes a Move is redirected to Online:The Magister Makes a Move (1 ms)
+    ✕  Cooked Direfish is redirected to Skyrim:Cooked Direfish (1 ms)
+    ✕  Copperwing Palace (Daggerfall) is redirected to null (3 ms)
+    ✓  Scroll of Invisibility is redirected to Scroll of Invisibility (1 ms)
+    ✕  Fires of Battle is redirected to Online:Fires of Battle
+    ✕  Restoring Order (Skyrim Creation Club) is redirected to Skyrim:Restoring Order (1 ms)
+    ✕  The Chelp Farmstead is redirected to null
+    ✕  Saras Orelu is redirected to Morrowind:Saras Orelu (1 ms)
+    ✕  Adistair Geric is redirected to Online:Adistair Geric
+    ✕  Nimriell's Research is redirected to Online:Nimriell's Research
+    ✕  Test the Poison is redirected to Legends:Test the Poison (1 ms)
+    ✕  Silsailen is redirected to Online:Silsailen
+    ✕  Jode Shrine (Bhoriane) is redirected to Daggerfall:Shrines (1 ms)
+    ✕  Waterfront is redirected to null
+    ✕  Thalmor is redirected to Lore:Thalmor
+    ✕  Letter to Narsis is redirected to Online:Letter to Narsis (1 ms)
+    ✕  Charlisse Alinie is redirected to Online:Charlisse Alinie
+    ✕  Evermore Steward is redirected to Legends:Evermore Steward (1 ms)
+    ✓  Skeleton Champion (Legends) is redirected to Legends:Skeleton Champion (1 ms)
+    ✕  Jagnas is redirected to Online:Jagnas
+
+FAIL __tests__/skyrimWiki.test.js
+  random skyrim.fandom.com pages
+    ✕  A Tragedy in Black is redirected to Skyrim:A Tragedy in Black (3 ms)
+    ✕  Dragon Investigation: Current Status is redirected to Skyrim:Dragon Investigation: Current Status (1 ms)
+    ✕  Yrsa is redirected to Skyrim:Yrsa (1 ms)
+    ✕  Iron Mace of Chills is redirected to Skyrim:Iron Mace of Chills
+    ✕  Lost Valkygg is redirected to Skyrim:Lost Valkygg (1 ms)
+    ✕  Daedric Warhammer of Terror is redirected to Skyrim:Daedric Warhammer of Terror (1 ms)
+    ✕  Stalhrim Helmet of Resurgence is redirected to Skyrim:Generic Magic Armor (3 ms)
+    ✕  Imperial Boots of Waning Fire is redirected to Skyrim:Generic Magic Armor (1 ms)
+    ✕  Elven Battleaxe of Diminishing is redirected to Skyrim:Elven Battleaxe of Diminishing
+    ✕  Key to Markarth Keep is redirected to Skyrim:Key to Markarth Keep
+    ✕  Necklace of Major Haggling is redirected to Skyrim:Necklace of Major Haggling
+    ✕  Key to Endon's House is redirected to Skyrim:Key to Endon's House (1 ms)
+    ✕  Dwarven Greatsword of Reaping is redirected to Skyrim:Dwarven Greatsword of Reaping
+    ✕  Steel Plate Helmet of Major Alchemy is redirected to Skyrim:Steel Plate Helmet of Major Alchemy
+    ✕  Research Log is redirected to Skyrim:Research Log
+    ✕  Imperial Light Helmet of Illusion is redirected to Skyrim:Imperial Light Helmet of Illusion (1 ms)
+    ✕  Ice and Chitin is redirected to Skyrim:Ice and Chitin
+    ✕  Iron Boots of Lifting is redirected to Skyrim:Iron Boots of Lifting
+    ✕  Dragonscale Boots of the Ox is redirected to Skyrim:Dragonscale Boots of the Ox
+    ✕  Nordic War Axe of Animus is redirected to Skyrim:Nordic War Axe of Animus
+    ✕  Invisibility (effect) is redirected to Skyrim:Invisibility (effect) (1 ms)
+    ✕  Vittoria Vici is redirected to Skyrim:Vittoria Vici
+    ✕  Children of the Sky is redirected to Skyrim:Children of the Sky
+    ✕  Orcish Armor of Major Alteration is redirected to Skyrim:Orcish Armor of Major Alteration
+    ✕  Steel Sword of Sapping is redirected to Skyrim:Steel Sword of Sapping
+    ✕  Reverent Dwarven Greatsword is redirected to Skyrim:Reverent Dwarven Greatsword
+    ✕  Ebony Mace of Damnation is redirected to Skyrim:Ebony Mace of Damnation
+    ✕  Iron Dagger of Fear is redirected to Skyrim:Iron Dagger of Fear
+    ✕  Alduin's Bane is redirected to Skyrim:Alduin's Bane
+    ✕  Animal Vigor is redirected to Skyrim:Animal Vigor
+    ✕  Twilight Sepulcher is redirected to Skyrim:Twilight Sepulcher
+    ✕  Idesa Sadri is redirected to Skyrim:Idesa Sadri
+    ✕  Song of the Alchemists is redirected to Skyrim:Song of the Alchemists (1 ms)
+    ✕  Daedric Bow of Storms is redirected to Skyrim:Daedric Bow of Storms
+    ✕  Iron Battleaxe is redirected to Skyrim:Iron Battleaxe
+    ✕  Glass Sword of Animus is redirected to Skyrim:Glass Sword of Animus (1 ms)
+    ✕  Falmer Blood Elixir is redirected to Skyrim:Falmer Blood Elixir
+    ✕  Reparations is redirected to Skyrim:Reparations (1 ms)
+    ✕  Honorhall Orphanage is redirected to Skyrim:Honorhall Orphanage
+    ✕  Spell Tome: Conjure Seeker is redirected to Skyrim:Spell Tome: Conjure Seeker (1 ms)
+    ✕  Pactur is redirected to Skyrim:Pactur
+    ✕  Elven Mace of Debilitation is redirected to Skyrim:Elven Mace of Debilitation (1 ms)
+    ✕  Letter from Quintus Navale is redirected to Skyrim:Letter from Quintus Navale (3 ms)
+    ✕  Abandoned Lodge is redirected to Skyrim:Abandoned Lodge
+    ✕  Bonemold Armor of Major Health is redirected to Skyrim:Generic Magic Armor (1 ms)
+    ✕  Brynjolf is redirected to Skyrim:Brynjolf
+    ✕  Steel Plate Bracers of Major Archery is redirected to Skyrim:Steel Plate Bracers of Major Archery
+    ✕  Olaf One-Eye is redirected to Skyrim:Olaf One-Eye (1 ms)
+    ✕  Umurn is redirected to Skyrim:Umurn (1 ms)
+    ✕  Riekling Spear is redirected to Skyrim:Riekling Spear (1 ms)
+	
+FAIL __tests__/homepage.test.js
+  elderscrolls.fandom.com portal pages
+    ✕  Portal:Arena is redirected to Arena:Arena (4 ms)
+    ✕  Portal:Battlespire is redirected to Battlespire:Battlespire (1 ms)
+    ✕  Portal:Blades is redirected to Blades:Blades (1 ms)
+    ✕  Portal:Daggerfall is redirected to Daggerfall:Daggerfall (1 ms)
+    ✕  Portal:Legends is redirected to Legends:Legends (1 ms)
+    ✕  Portal:Morrowind is redirected to Morrowind:Morrowind (1 ms)
+    ✕  Portal:Oblivion is redirected to Oblivion:Oblivion (1 ms)
+    ✕  Portal:Online is redirected to Online:Online (1 ms)
+    ✕  Portal:Redguard is redirected to Redguard:Redguard (1 ms)
+    ✕  Portal:Sandbox is redirected to null
+    ✕  Portal:Skyrim is redirected to Skyrim:Skyrim
+    ✕  Portal:The Elder Scrolls II: Daggerfall is redirected to Daggerfall:Daggerfall
+    ✕  Portal:The Elder Scrolls III: Morrowind is redirected to Morrowind:Morrowind
+    ✕  Portal:The Elder Scrolls IV: Oblivion is redirected to Oblivion:Oblivion
+    ✕  Portal:The Elder Scrolls V: Skyrim is redirected to Skyrim:Skyrim (1 ms)
+  URLs that point to the main page of either wiki
+    ✕  https://elderscrolls.fandom.com is redirected to UESP page Main Page
+    ✕  http://elderscrolls.wikia.com is redirected to UESP page Main Page
+    ✕  http://skyrim.fandom.com is redirected to UESP page Skyrim:Skyrim (1 ms)
+    ✕  https://skyrim.wikia.com is redirected to UESP page Skyrim:Skyrim
+    ✕  https://skyrim.wikia.com/wiki/Main_Page is redirected to UESP page Skyrim:Skyrim
+    ✕  https://elderscrolls.fandom.com/wiki/Skyrim_Wiki is redirected to UESP page Skyrim:Skyrim
+    ✕  https://elderscrolls.fandom.com/wiki/The_Elder_Scrolls_wiki is redirected to UESP page Main Page
+    ✕  https://elderscrolls.wikia.com/wiki/The_Elder_Scrolls_wiki is redirected to UESP page Main Page (1 ms)
+    ✕  https://skyrim.fandom.com/wiki/The_Elder_Scrolls_Wiki is redirected to UESP page null
+
