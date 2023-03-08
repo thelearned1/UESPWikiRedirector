@@ -1,0 +1,31 @@
+[
+	{
+		"fandomUrl": "https://elderscrolls.fandom.com",
+		"uespTitle": "Main Page"
+	},
+	{
+		"fandomUrl": "http://elderscrolls.wikia.com",
+		"uespTitle": "Main Page"
+	},
+	{
+		"fandomUrl": "http://skyrim.fandom.com",
+		"uespTitle": "Skyrim:Skyrim"
+	},
+
+	{
+		"fandomUrl": "https://skyrim.wikia.com",
+		"uespTitle": "Skyrim:Skyrim"
+	},
+	{
+		"fandomUrl": "https://skyrim.wikia.com/wiki/Main_Page",
+		"uespTitle": ""
+	},
+	{
+		"fandomUrl": "",
+		"uespTitle": ""
+	},
+	{
+		"fandomUrl": "",
+		"uespTitle": ""
+	}
+]
