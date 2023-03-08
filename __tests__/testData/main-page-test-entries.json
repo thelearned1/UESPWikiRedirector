@@ -18,14 +18,22 @@
 	},
 	{
 		"fandomUrl": "https://skyrim.wikia.com/wiki/Main_Page",
-		"uespTitle": ""
+		"uespTitle": "Skyrim:Skyrim"
 	},
 	{
-		"fandomUrl": "",
-		"uespTitle": ""
+		"fandomUrl": "https://elderscrolls.fandom.com/wiki/Skyrim_Wiki",
+		"uespTitle": "Skyrim:Skyrim"
 	},
 	{
-		"fandomUrl": "",
-		"uespTitle": ""
+		"fandomUrl": "https://elderscrolls.fandom.com/wiki/The_Elder_Scrolls_wiki",
+		"uespTitle": "Main Page"
+	},
+	{
+		"fandomUrl": "https://elderscrolls.wikia.com/wiki/The_Elder_Scrolls_wiki",
+		"uespTitle": "Main Page"
+	},
+	{
+		"fandomUrl": "https://skyrim.fandom.com/wiki/The_Elder_Scrolls_Wiki",
+		"uespTitle": null
 	}
 ]
