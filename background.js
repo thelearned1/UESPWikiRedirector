@@ -37,7 +37,6 @@
         }
       }
       
-
       // Generate new url
       const host = 'en.uesp.net/?search=';
       const redirectUrl = `https://${host}${urlChange}`; // Create the redirect URL
