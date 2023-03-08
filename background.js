@@ -12,6 +12,24 @@
       var HOMEPAGE_REGEX = /^Portal:(The\+Elder\+Scrolls\+[IV]+:\+)?/;
       function getUespPage2(url) {
         let wikiaPageName = url.pathname.replace("/wiki/", "").replace(/_/g, "+");
+        switch (wikiaPageName.toLowerCase()) {
+          case "main+page":
+          case "/":
+            if (url.host.match(SKYRIM_REGEX)) {
+              return "Skyrim:Skyrim";
+            } else {
+              return "Main+Page";
+            }
+            break;
+          case "skyrim+wiki":
+            return "Skyrim:Skyrim";
+            break;
+          case "the+elder+scrolls+wiki":
+            return "Main+Page";
+            break;
+          default:
+            break;
+        }
         let namespace = "", uespPageName = "";
         let titleInfo = wikiaPageName.match(NAMESPACE_REGEX);
         if (titleInfo) {
